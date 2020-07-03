@@ -257,6 +257,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://f416720001.github.io/2020/07/VueJS%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="趙映翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="映翔的學習筆記">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/VueJS%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" itemprop="url">VueJS的那些事</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-07-03T20:59:49+08:00">
+                2020-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><p><img src="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png" alt="vuex"></p>
+<h2 id="幾個重點"><a href="#幾個重點" class="headerlink" title="幾個重點"></a>幾個重點</h2><h3 id="component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入"><a href="#component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入" class="headerlink" title="component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入"></a>component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</h3><p><code>this.$store.commit(&#39;SETDAY&#39;, val)</code></p>
+<hr>
+<h1 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h1><hr>
+<h2 id="Error-訊息"><a href="#Error-訊息" class="headerlink" title="Error 訊息"></a>Error 訊息</h2><pre><code>vue-router.esm.js?8c4f:2062 Uncaught (in promise) Error: Avoided redundant navigation to current location: "/path/1".</code></pre>
+
+<h2 id="解決之道"><a href="#解決之道" class="headerlink" title="解決之道"></a>解決之道</h2><h3 id="這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><a href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。" class="headerlink" title="這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。"></a>這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</h3><pre><code>this.$router.replace({
+    params: {
+        day: day + 1,
+    },
+});</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://f416720001.github.io/2020/07/%E5%89%B5%E7%AB%99%E7%AC%AC%E4%B8%80%E7%AF%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -340,8 +469,7 @@
 </code></pre>
 
 
-<h2 id="常用command"><a href="#常用command" class="headerlink" title="常用command"></a>常用command</h2><pre><code>
-本機觀看
+<h2 id="常用command"><a href="#常用command" class="headerlink" title="常用command"></a>常用command</h2><pre><code>本機觀看
 hexo s
 
 更新網站 三部曲
@@ -565,7 +693,7 @@ hexo d
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
