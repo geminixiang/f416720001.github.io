@@ -77,8 +77,8 @@
         enable: true,
         loadingImage: '/images/theme/loading.gif',
       },
-      donate_alipay: '',
-      donate_wechat: '',
+      donate_alipay: 'https://pic.izhaoo.com/alipay.jpg',
+      donate_wechat: 'https://pic.izhaoo.com/wechat.jpg',
       motto: {
         api: '',
         default: '105元 = 法式芥茉香雞堡+小杯玉米湯+大暑大可少冰。'
@@ -136,12 +136,13 @@
     <li class="menu-item"><a href="/about "> 關於</a></li>
     
   </ul>
-  <div class="menu-copyright"><p>Copyright© 2019-2020 | <a target="_blank" href="https://geminimc.nctu.me/">GeminiXiang</a> AllRightsReserved</p></div>
+  <div class="menu-copyright"><p>Copyright© 2020 | <a target="_blank" href="https://geminimc.nctu.me/">GeminiXiang</a> AllRightsReserved</p></div>
 </nav>
   <main id="main">
   <div class="container" id="container">
     <article class="article">
   <section class="head">
+  <a href="/" style="position: absolute; border-radius:50%; padding:55px; background-image: url(/images/theme/ME.png);background-size:cover;"></a>
   <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">VueJS的那些事</h1>
@@ -158,8 +159,8 @@
       <h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><p><img   class="lazyload" data-original="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="vuex"></p>
 <h2 id="幾個重點"><a href="#幾個重點" class="headerlink" title="幾個重點"></a>幾個重點</h2><h3 id="component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入"><a href="#component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入" class="headerlink" title="component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入"></a>component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</h3><p><code>this.$store.commit(&#39;SETDAY&#39;, val)</code></p>
 <hr>
-<h1 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h1><hr>
-<h2 id="Error-訊息"><a href="#Error-訊息" class="headerlink" title="Error 訊息"></a>Error 訊息</h2><pre><code>vue-router.esm.js?8c4f:2062 Uncaught (in promise) Error: Avoided redundant navigation to current location: "/path/1".</code></pre>
+<h1 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h1><h2 id="Error-訊息"><a href="#Error-訊息" class="headerlink" title="Error 訊息"></a>Error 訊息</h2><pre><code>vue-router.esm.js?8c4f:2062 Uncaught (in promise) 
+Error: Avoided redundant navigation to current location: "/path/1".</code></pre>
 
 <h2 id="解決之道"><a href="#解決之道" class="headerlink" title="解決之道"></a>解決之道</h2><h3 id="這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><a href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。" class="headerlink" title="這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。"></a>這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</h3><pre><code>this.$router.replace({
     params: {
@@ -193,6 +194,16 @@ $ npm run dev
 </code></pre>
     </section>
     <section class="extra">
+      
+        <section class="donate">
+  <!-- <div class="qrcode">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div> -->
+  <div class="icon">
+    <a href="https://github.com/f416720001" target="_blank" rel="noopener" id="alipay"><i class="iconfont icongithub-fill"></i></a>
+    <a href="https://geminimc.nctu.me/" target="_blank" rel="noopener" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
       
       
       
@@ -247,7 +258,7 @@ $ npm run dev
     </a>
     
   </div>
-  <div class="footer-copyright"><p>Copyright© 2019-2020 | <a target="_blank" href="https://geminimc.nctu.me/">GeminiXiang</a> AllRightsReserved</p></div>
+  <div class="footer-copyright"><p>Copyright© 2020 | <a target="_blank" href="https://geminimc.nctu.me/">GeminiXiang</a> AllRightsReserved</p></div>
 </footer>
   
       <div class="fab fab-plus">

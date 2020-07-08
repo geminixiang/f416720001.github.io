@@ -578,9 +578,10 @@ body p {
   height: 100%;
   top: 0;
   background: url("/images/theme/loading.gif") no-repeat center;
-  background-color: #fff;
-  z-index: 2019;
+  background-color: #1c273a;
+  z-index: 2020;
   overflow: hidden;
+  opacity: 0.5;
 }
 .preview .preview-image {
   z-index: 40;
@@ -596,7 +597,7 @@ body p {
 }
 .preview .preview-image .preview-tagline {
   font-size: 3em;
-  font-family: 'Quicksand', 'Vollkorn', serif;
+  font-family: 'Microsoft JhengHei', 'PT Sans', Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-weight: 300;
   margin: 0 10%;

@@ -1,6 +1,6 @@
 console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使用的是:", "https://github.com/izhaoo/hexo-theme-zhaoo");
 
-(function ($) {
+;(function ($) {
   "use strict";
 
   var Func = {
@@ -19,7 +19,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
       $(".footer").removeClass("blur");
     },
     activeFab: function () {
-      $(".fab-menu").addClass(newLocal);
+      $(".fab-menu").addClass("fab-menu-active");
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
     },
@@ -86,9 +86,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
         } else {
           Func.showMenu();
           // gemini
-          // if (CONFIG.fab.alwaysShow === false) {
-          //   Func.hideFab();
-          // }
+          if (CONFIG.fab.alwaysShow === false) {
+            Func.hideFab();
+          }
         }
       });
       $(".fab-menu, .fab-up").on("click", function () {
@@ -195,9 +195,9 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
     if (CONFIG.lazyload.enable) {
       Action.lazyload();
     }
-    if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
-      Action.donate();
-    }
+    // if (CONFIG.donate_alipay || CONFIG.donate_wechat) {
+    //   Action.donate();
+    // }
     if (CONFIG.galleries.enable) {
       Action.galleries();
     }
