@@ -37,12 +37,13 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
     scroolFab: function () {
       var height = $(window).height();
       var scrollTop = $(window).scrollTop();
-      if (scrollTop > height) {
-        Func.showFab();
-      } else {
-        Func.freezeFab();
-        Func.hideFab();
-      }
+      // gemini xiang fix always on
+      // if (scrollTop > height) {
+      //   Func.showFab();
+      // } else {
+      //   Func.freezeFab();
+      //   Func.hideFab();
+      // }
     },
     scroolToTop: function () {
       $('body,html').animate({
