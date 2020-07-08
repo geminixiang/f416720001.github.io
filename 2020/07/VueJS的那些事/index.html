@@ -114,7 +114,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png">
 <meta property="article:published_time" content="2020-07-03T12:59:49.000Z">
-<meta property="article:modified_time" content="2020-07-03T15:06:14.310Z">
+<meta property="article:modified_time" content="2020-07-08T05:20:08.596Z">
 <meta property="article:author" content="趙映翔">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png">
@@ -338,6 +338,31 @@
         day: day + 1,
     },
 });</code></pre>
+
+<h1 id="vue-windows10-ubuntu-wsl"><a href="#vue-windows10-ubuntu-wsl" class="headerlink" title="vue + windows10 ubuntu wsl"></a>vue + windows10 ubuntu wsl</h1><pre><code>安裝指令紀錄
+## 更新apt-get
+$ sudo apt update
+$ sudo apt-get update
+## 安裝node.js+npm
+$ sudo apt-get install nodejs
+$ sudo apt-get install npm
+$ npm install npm -g
+$ npm list -g
+## 安裝git
+$ sudo apt-get install git
+## 安裝vue + vue-cli
+$ npm install vue
+$ yarn global add @vue/cli-init
+## 安裝webpack
+$ npm install webpack -g
+## 新建專案
+$ vue init webpack PROJECT_NAME
+## 打開專案資料夾
+$ cd PROJECT_NAME
+$ npm install
+## 執行
+$ npm run dev
+</code></pre>
       
     </div>
     
@@ -483,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuex"><span class="nav-number">1.</span> <span class="nav-text">Vuex</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#幾個重點"><span class="nav-number">1.1.</span> <span class="nav-text">幾個重點</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入"><span class="nav-number">1.1.1.</span> <span class="nav-text">component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Router"><span class="nav-number">2.</span> <span class="nav-text">Router</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-訊息"><span class="nav-number">2.1.</span> <span class="nav-text">Error 訊息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解決之道"><span class="nav-number">2.2.</span> <span class="nav-text">解決之道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><span class="nav-number">2.2.1.</span> <span class="nav-text">這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuex"><span class="nav-number">1.</span> <span class="nav-text">Vuex</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#幾個重點"><span class="nav-number">1.1.</span> <span class="nav-text">幾個重點</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入"><span class="nav-number">1.1.1.</span> <span class="nav-text">component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Router"><span class="nav-number">2.</span> <span class="nav-text">Router</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-訊息"><span class="nav-number">2.1.</span> <span class="nav-text">Error 訊息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解決之道"><span class="nav-number">2.2.</span> <span class="nav-text">解決之道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><span class="nav-number">2.2.1.</span> <span class="nav-text">這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue-windows10-ubuntu-wsl"><span class="nav-number">3.</span> <span class="nav-text">vue + windows10 ubuntu wsl</span></a></li></ol></div>
             
 
           </div>
