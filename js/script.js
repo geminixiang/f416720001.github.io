@@ -19,7 +19,7 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
       $(".footer").removeClass("blur");
     },
     activeFab: function () {
-      $(".fab-menu").addClass("fab-menu-active");
+      $(".fab-menu").addClass(newLocal);
       $(".fab-up").addClass("fab-up-active");
       $(".fab-plus").addClass("fab-plus-active");
     },
@@ -38,12 +38,12 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
       var height = $(window).height();
       var scrollTop = $(window).scrollTop();
       // gemini xiang fix always on
-      // if (scrollTop > height) {
-      //   Func.showFab();
-      // } else {
-      //   Func.freezeFab();
-      //   Func.hideFab();
-      // }
+      if (scrollTop > height) {
+        Func.showFab();
+      } else {
+        Func.freezeFab();
+        Func.hideFab();
+      }
     },
     scroolToTop: function () {
       $('body,html').animate({
@@ -85,9 +85,10 @@ console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使�
           Func.hideMenu();
         } else {
           Func.showMenu();
-          if (CONFIG.fab.alwaysShow === false) {
-            Func.hideFab();
-          }
+          // gemini
+          // if (CONFIG.fab.alwaysShow === false) {
+          //   Func.hideFab();
+          // }
         }
       });
       $(".fab-menu, .fab-up").on("click", function () {
