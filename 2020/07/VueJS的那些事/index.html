@@ -150,48 +150,21 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-03</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>836</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>866</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
       <h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><p><img   class="lazyload" data-original="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="vuex"></p>
-<h2 id="幾個重點"><a href="#幾個重點" class="headerlink" title="幾個重點"></a>幾個重點</h2><h3 id="component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入"><a href="#component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入" class="headerlink" title="component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入"></a>component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</h3><p><code>this.$store.commit(&#39;SETDAY&#39;, val)</code></p>
+<h2 id="幾個重點"><a href="#幾個重點" class="headerlink" title="幾個重點"></a>幾個重點</h2><h3 id="component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入"><a href="#component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入" class="headerlink" title="component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入"></a>component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">this.<span class="hljs-variable">$store</span>.commit(<span class="hljs-string">'SETDAY'</span>, val)<br></code></pre></td></tr></table></figure>
+
 <hr>
-<h1 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h1><h2 id="Error-訊息"><a href="#Error-訊息" class="headerlink" title="Error 訊息"></a>Error 訊息</h2><pre><code>vue-router.esm.js?8c4f:2062 Uncaught (in promise) 
-Error: Avoided redundant navigation to current location: "/path/1".</code></pre>
+<h1 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h1><h2 id="Error-訊息"><a href="#Error-訊息" class="headerlink" title="Error 訊息"></a>Error 訊息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">vue-router.esm.js?8c4f:2062 Uncaught (<span class="hljs-keyword">in</span> promise) <br>Error: Avoided redundant navigation to current location: <span class="hljs-string">"/path/1"</span>.<br></code></pre></td></tr></table></figure>
 
-<h2 id="解決之道"><a href="#解決之道" class="headerlink" title="解決之道"></a>解決之道</h2><h3 id="這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><a href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。" class="headerlink" title="這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。"></a>這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</h3><pre><code>this.$router.replace({
-    params: {
-        day: day + 1,
-    },
-});</code></pre>
+<h2 id="解決之道"><a href="#解決之道" class="headerlink" title="解決之道"></a>解決之道</h2><h3 id="這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><a href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。" class="headerlink" title="這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。"></a>這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">this.<span class="hljs-variable">$router</span>.replace(&#123;<br>    params: &#123;<br>        day: day + 1,<br>    &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure>
 
-<h1 id="vue-windows10-ubuntu-wsl"><a href="#vue-windows10-ubuntu-wsl" class="headerlink" title="vue + windows10 ubuntu wsl"></a>vue + windows10 ubuntu wsl</h1><pre><code>安裝指令紀錄
-## 更新apt-get
-$ sudo apt update
-$ sudo apt-get update
-## 安裝node.js+npm
-$ sudo apt-get install nodejs
-$ sudo apt-get install npm
-$ npm install npm -g
-$ npm list -g
-## 安裝git
-$ sudo apt-get install git
-## 安裝vue + vue-cli
-$ npm install vue
-$ yarn global add @vue/cli-init
-## 安裝webpack
-$ npm install webpack -g
-## 新建專案
-$ vue init webpack PROJECT_NAME
-## 打開專案資料夾
-$ cd PROJECT_NAME
-$ npm install
-## 執行
-$ npm run dev
-</code></pre>
+<h1 id="vue-windows10-ubuntu-wsl"><a href="#vue-windows10-ubuntu-wsl" class="headerlink" title="vue + windows10 ubuntu wsl"></a>vue + windows10 ubuntu wsl</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">安裝指令紀錄<br><span class="hljs-comment">## 更新apt-get</span><br>$ sudo apt update<br>$ sudo apt-get update<br><span class="hljs-comment">## 安裝node.js+npm</span><br>$ sudo apt-get install nodejs<br>$ sudo apt-get install npm<br>$ npm install npm -g<br>$ npm list -g<br><span class="hljs-comment">## 安裝git</span><br>$ sudo apt-get install git<br><span class="hljs-comment">## 安裝vue + vue-cli</span><br>$ npm install vue<br>$ yarn global add @vue/cli-init<br><span class="hljs-comment">## 安裝webpack</span><br>$ npm install webpack -g<br><span class="hljs-comment">## 新建專案</span><br>$ vue init webpack PROJECT_NAME<br><span class="hljs-comment">## 打開專案資料夾</span><br>$ <span class="hljs-built_in">cd</span> PROJECT_NAME<br>$ npm install<br><span class="hljs-comment">## 執行</span><br>$ npm run dev<br></code></pre></td></tr></table></figure>
     </section>
     <section class="extra">
       
