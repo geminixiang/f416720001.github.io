@@ -20,7 +20,7 @@
 }
 body {
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   color: #33333d;
   font-family: 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
 }
@@ -915,7 +915,7 @@ body p {
 }
 .post .post-item .post-wrap .post-content {
   padding: 20px;
-  height: 170px;
+  height: 200px;
 }
 .post .post-item .post-wrap .post-content .post-title {
   font-size: 1.5em;
@@ -943,7 +943,7 @@ body p {
   margin-right: 5px;
 }
 .article {
-  max-width: 700px;
+  max-width: 900px;
   margin: 45px auto;
   box-shadow: 0 5px 40px -1px rgba(2,10,18,0.11);
 }
@@ -954,6 +954,19 @@ body p {
 }
 .article .head {
   position: relative;
+}
+.article .head #geminilogo {
+  position: absolute;
+  border-radius: 50%;
+  padding: 55px;
+  background-image: url("/images/theme/ME.png");
+  background-size: cover;
+}
+.article .head #geminilogo:hover {
+  background-image: url("/images/theme/goback.svg");
+  transform: rotate(0.5turn);
+  background-color: rgba(128,255,238,0.769);
+  transition: 0.5s;
 }
 .article .head .head-mask {
   position: absolute;
@@ -1028,7 +1041,7 @@ body p {
 }
 .article .main .content p code {
   font-size: 1em;
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
   padding: 2px 5px;
   border-radius: 2px;
   color: #ffbe5b;
@@ -1066,8 +1079,9 @@ body p {
   border: none;
 }
 .article .main .content figure .code code {
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
   padding: 1em;
+  border-radius: 10px;
 }
 .article .main .content figure > * {
   border-spacing: 0px;
@@ -1084,7 +1098,7 @@ body p {
 .article .main .content blockquote {
   margin: 0 0 1em;
   padding: 15px 20px;
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
   border-left: 3px solid #ffbe5b;
   border-left-width: 6px;
 }
@@ -1152,7 +1166,7 @@ body p {
   list-style-type: none;
   margin-right: 1em;
   padding: 5px 10px;
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
 }
 .article .extra .tag-list .tag-list-item:hover {
   cursor: pointer;
@@ -1175,7 +1189,7 @@ body p {
 .article .comments .btn {
   display: block;
   padding: 10px;
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
   text-align: center;
 }
 .article .comments .btn:hover {
@@ -1269,7 +1283,7 @@ body p {
 }
 .tags a {
   padding: 5px 10px;
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
   margin-right: 10px;
 }
 .tags a:hover {
@@ -1296,7 +1310,7 @@ body p {
   margin: 0 10px 10px 0;
   display: inline-block;
   padding: 5px 10px;
-  background-color: #f6f8fa;
+  background-color: #c2d5e8;
 }
 .categories ul li a {
   margin-right: 5px;
