@@ -164,7 +164,7 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-03</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>866</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1143</span>
     </div>
   </div>
 </section>
@@ -179,6 +179,8 @@
 <h2 id="解決之道"><a href="#解決之道" class="headerlink" title="解決之道"></a>解決之道</h2><h3 id="這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。"><a href="#這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。" class="headerlink" title="這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。"></a>這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">this.<span class="hljs-variable">$router</span>.replace(&#123;<br>    params: &#123;<br>        day: day + 1,<br>    &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure>
 
 <h1 id="vue-windows10-ubuntu-wsl"><a href="#vue-windows10-ubuntu-wsl" class="headerlink" title="vue + windows10 ubuntu wsl"></a>vue + windows10 ubuntu wsl</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">安裝指令紀錄<br><span class="hljs-comment">## 更新apt-get</span><br>$ sudo apt update<br>$ sudo apt-get update<br><span class="hljs-comment">## 安裝node.js+npm</span><br>$ sudo apt-get install nodejs<br>$ sudo apt-get install npm<br>$ npm install npm -g<br>$ npm list -g<br><span class="hljs-comment">## 安裝git</span><br>$ sudo apt-get install git<br><span class="hljs-comment">## 安裝vue + vue-cli</span><br>$ npm install vue<br>$ yarn global add @vue/cli-init<br><span class="hljs-comment">## 安裝webpack</span><br>$ npm install webpack -g<br><span class="hljs-comment">## 新建專案</span><br>$ vue init webpack PROJECT_NAME<br><span class="hljs-comment">## 打開專案資料夾</span><br>$ <span class="hljs-built_in">cd</span> PROJECT_NAME<br>$ npm install<br><span class="hljs-comment">## 執行</span><br>$ npm run dev<br></code></pre></td></tr></table></figure>
+
+<h1 id="npm-run-build-遇到各種難題"><a href="#npm-run-build-遇到各種難題" class="headerlink" title="npm run build 遇到各種難題"></a>npm run build 遇到各種難題</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">## 問題?建立完後，把dist資料夾部屬上去，一片空白</span><br><span class="hljs-comment">## 解決。vue cli3 專案根目錄新增 vue.config.js 這個檔案，裡面新增下面這一串</span><br>module.exports = &#123;<br>  publicPath: <span class="hljs-string">"./"</span><br>&#125;;<br><br><span class="hljs-comment"># 所有template css vue 檔案中的路徑、還有import時、還有 axios.get 時請注意，麻煩以 ./ or @/ (==./src)開頭</span><br><span class="hljs-comment">## 圖片就以 ./img 為開頭，然後圖片丟到 ./public/img 即可</span><br></code></pre></td></tr></table></figure>
     </section>
     <section class="extra">
       
@@ -224,6 +226,8 @@
       
       
 <nav class="nav">
+  
+    <a href="/2020/07/%E8%AB%96%E6%96%87%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/"><i class="iconfont iconleft"></i>論文閱讀筆記</a>
   
   
     <a href="/2020/07/%E5%89%B5%E7%AB%99%E7%AC%AC%E4%B8%80%E7%AF%87/">創站第一篇<i class="iconfont iconright"></i></a>
