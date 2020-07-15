@@ -34,7 +34,9 @@
     
     <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
      
-    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,遇到問題全部的教學都跟你說 deploy 到gihub..." />
+    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,2020-07-15
+新增EMOJI 參考連結
+123..." />
      
     <meta name="author" content="趙映翔" />
      
@@ -163,25 +165,34 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-03</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>449</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1335</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
-      <h1 id="遇到問題"><a href="#遇到問題" class="headerlink" title="遇到問題"></a>遇到問題</h1><h3 id="全部的教學都跟你說-deploy-到gihub-page是這樣設置"><a href="#全部的教學都跟你說-deploy-到gihub-page是這樣設置" class="headerlink" title="全部的教學都跟你說 deploy 到gihub page是這樣設置"></a>全部的教學都跟你說 deploy 到gihub page是這樣設置</h3><pre><code>deploy:
+      <p>2020-07-15<br>
+新增EMOJI <a href="https://chaxiaoniu.oschina.io/2017/07/10/HexoAddEmoji/" target="_blank" rel="noopener">參考連結</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 移除原本的markdown<br>$ npm un hexo-renderer-marked --save<br>// 新增markdown-it<br>$ npm i hexo-renderer-markdown-it --save<br>// 新增markdown-it-emoji<br>$ npm install markdown-it-emoji --save<br></code></pre></td></tr></table></figure>
+<p>_config.yml 設定改成這樣</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Markdown-it config</span><br><span class="hljs-comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span><br>markdown:<br>  render:<br>    html: <span class="hljs-literal">true</span><br>    xhtmlOut: <span class="hljs-literal">false</span><br>    breaks: <span class="hljs-literal">true</span><br>    linkify: <span class="hljs-literal">true</span><br>    typographer: <span class="hljs-literal">true</span><br>    quotes: <span class="hljs-string">'“”‘’'</span><br>  plugins:<br>    - markdown-it-abbr<br>    - markdown-it-footnote<br>    - markdown-it-ins<br>    - markdown-it-sub<br>    - markdown-it-sup<br>    - markdown-it-emoji  <span class="hljs-comment">## add emoji</span><br>  anchors:<br>    level: 2<br>    collisionSuffix: <span class="hljs-string">'v'</span><br>    <span class="hljs-comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span><br>    permalink: <span class="hljs-literal">false</span>  <br>    permalinkClass: header-anchor<br>    <span class="hljs-comment"># The symbol used to make the permalink</span><br>    permalinkSymbol: ¶<br></code></pre></td></tr></table></figure>
+<hr>
+<p>2020-07-03</p>
+<h1>遇到問題</h1>
+<h2 id="全部的教學都跟你說-deploy-到gihub-page是這樣設置">全部的教學都跟你說 deploy 到gihub page是這樣設置</h2>
+<pre><code>deploy:
   type: git
   repo: https://github.com/f416720001/f416720001.github.io.git
   branch: master
 </code></pre>
-<h3 id="實則上是"><a href="#實則上是" class="headerlink" title="實則上是"></a>實則上是</h3><pre><code>deploy:
+<h3 id="實則上是">實則上是</h3>
+<pre><code>deploy:
   type: git
   repository: https://github.com/f416720001/f416720001.github.io.git
   branch: master
 </code></pre>
-
-
-<h2 id="常用command"><a href="#常用command" class="headerlink" title="常用command"></a>常用command</h2><pre><code>本機觀看
+<h2 id="常用command">常用command</h2>
+<pre><code>本機觀看
 hexo s
 
 更新網站 三部曲
@@ -189,8 +200,6 @@ hexo cl
 hexo g
 hexo d
 </code></pre>
-
-
 <p>無語，總之先這樣，最近忙著把vue徹底搞懂，之後會忙一陣子DETR影像辨識吧，遇到難關都會記錄在這，因為我金魚腦又懶，這幾年來換了超多筆記 evernote、gitbook、hackmd、notion(存活)，希望這個也能順利存活下來，畢竟每天都在用vs code，總不會忘記吧XD</p>
 
     </section>

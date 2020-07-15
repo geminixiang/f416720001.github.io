@@ -34,7 +34,8 @@
     
     <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
      
-    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,Colab 各種疑難雜症Matplotlib 繁體中文..." />
+    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,Colab 各種疑難雜症
+Matplotlib 繁體中..." />
      
     <meta name="author" content="趙映翔" />
      
@@ -163,13 +164,19 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-15</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>845</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>908</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
-      <h1 id="Colab-各種疑難雜症"><a href="#Colab-各種疑難雜症" class="headerlink" title="Colab 各種疑難雜症"></a>Colab 各種疑難雜症</h1><h2 id="Matplotlib-繁體中文顯示"><a href="#Matplotlib-繁體中文顯示" class="headerlink" title="Matplotlib 繁體中文顯示"></a>Matplotlib 繁體中文顯示</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 1. 下載台北黑體-&gt;移動到字體資料夾<br>!wget --load-cookies /tmp/cookies.txt <span class="hljs-string">"https://docs.google.com/uc?export=download&amp;confirm=<span class="hljs-variable">$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+)</span>.*/\1\n/p')&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_"</span> -O TaipeiSansTCBeta-Regular.ttf &amp;&amp; rm -rf /tmp/cookies.txt<br>!mv TaipeiSansTCBeta-Regular.ttf /usr/share/fonts/truetype/<br>// 2. 在程式裡宣告<br>import matplotlib.font_manager as fm<br>path = <span class="hljs-string">'/usr/share/fonts/truetype/TaipeiSansTCBeta-Regular.ttf'</span><br>fontprop = fm.FontProperties(fname=path, size=24)<br>// 3. 在該顯示中文的句子中加入這個屬性 (fontproperties=fontprop)<br>ex.<br>plt.title(<span class="hljs-string">'預測: '</span> + str(prediction), color=<span class="hljs-string">'white'</span>, fontproperties=fontprop)<br></code></pre></td></tr></table></figure>
+      <h1>Colab 各種疑難雜症</h1>
+<h2 id="Matplotlib-繁體中文顯示">Matplotlib 繁體中文顯示</h2>
+<blockquote>
+<p>2020/07/15 測試可用<br>
+缺點: 字體大小被鎖在24，但這方法最簡單，能看到就好 😤</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 1. Google Drive下載台北黑體-&gt;移動到字體資料夾<br>!wget --load-cookies /tmp/cookies.txt <span class="hljs-string">"https://docs.google.com/uc?export=download&amp;confirm=<span class="hljs-variable">$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+)</span>.*/\1\n/p')&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_"</span> -O TaipeiSansTCBeta-Regular.ttf &amp;&amp; rm -rf /tmp/cookies.txt<br>!mv TaipeiSansTCBeta-Regular.ttf /usr/share/fonts/truetype/<br>// 2. 在程式裡宣告<br>import matplotlib.font_manager as fm<br>path = <span class="hljs-string">'/usr/share/fonts/truetype/TaipeiSansTCBeta-Regular.ttf'</span><br>fontprop = fm.FontProperties(fname=path, size=24)<br>// 3. 在該顯示中文的句子中加入這個屬性 (fontproperties=fontprop)<br>ex.<br>plt.title(<span class="hljs-string">'預測: '</span> + str(prediction), color=<span class="hljs-string">'white'</span>, fontproperties=fontprop)<br></code></pre></td></tr></table></figure>
     </section>
     <section class="extra">
       
