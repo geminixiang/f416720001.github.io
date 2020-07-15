@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>機器學習の那些事 - 映翔的學習筆記</title>
+    <title>降維 - 映翔的學習筆記</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -34,8 +34,8 @@
     
     <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
      
-    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,2020.07.15.
-https://colab.r..." />
+    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,
+降維是機器學習中很有意思的一部分，很多時候它是無監督..." />
      
     <meta name="author" content="趙映翔" />
      
@@ -159,41 +159,41 @@ https://colab.r..." />
   <a href="/" id="geminilogo"></a>
   <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">機器學習の那些事</h1>
+    <h1 class="head-title">降維</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-15</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1451</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1224</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
-      <p>2020.07.15.<br>
-<a href="https://colab.research.google.com/drive/1gPwOi-itgalWUxj8ZTTE6bwVl6kLyPLs?usp=sharing" target="_blank" rel="noopener">https://colab.research.google.com/drive/1gPwOi-itgalWUxj8ZTTE6bwVl6kLyPLs?usp=sharing</a><br>
-<img   class="lazyload" data-original="https://scikit-learn.org/stable/_static/ml_map.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="cheatsheet"></p>
-<h1>sklearn</h1>
-<blockquote>
-<p>我使用的版本 scikit-learn 0.23.1</p>
+      <blockquote>
+<p>降維是機器學習中很有意思的一部分，很多時候它是無監督的，能夠更好地刻畫資料，對模型效果提升也有幫助，同時在資料視覺化中也有著舉足輕重的作用。<br>
+一說到降維，大家第一反應總是PCA，基本上每一本講機器學習的書都會提到PCA，而除此之外其實還有很多很有意思的降維演算法，其中就包括isomap，以及isomap中用到的MDS。<br>
+ISOMAP是‘流形學習’中的一個經典演算法，流形學習貢獻了很多降維演算法，其中一些與很多機器學習演算法也有結合，但上學的時候還看了蠻多的機器學習的書，從來沒聽說過流形學習的概念，還是在最新的周志華版的《機器學習》裡才看到,很有意思，記錄分享一下。<br>
+<a href="https://www.itread01.com/content/1546993641.html" target="_blank" rel="noopener">https://www.itread01.com/content/1546993641.html</a></p>
 </blockquote>
-<h2 id="ImportError-No-module-named-sklearn-cross-validation">ImportError: No module named sklearn.cross_validation</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br></code></pre></td></tr></table></figure>
-<h2 id="ImportError-No-module-named-sklearn-decomposition-RandomizedPCA">ImportError: No module named sklearn.decomposition.RandomizedPCA</h2>
+<h1>主成份分析（Principal Component Analysis, PCA）</h1>
+<p>面對高維度的資料（實務上還有其他很多像是財務或者氣候資料也都屬於高維度資料），我們需要用一些方法找出特別重要的二到三個變數，或者將許多的變數組合成讓我們更容易理解且視覺化的幾個維度。</p>
+<p>這種方法稱作降維（Dimensionality Reduction），我們接著要使用其中一種方法稱為：主成份分析（Principal Component Analysis, PCA）來協助我們視覺化 digits 資料。</p>
 <blockquote>
-<p>sklearn.decomposition.RandomizedPCA 僅僅是0.17的版本的。後續的版本都沒有了。</p>
+<p>「主成分分析在機器學習內被歸類成為降維(Dimension reduction)內特徵擷取(Feature extraction)的一種方法，降維就是希望資料的維度數減少，但整體的效能不會差異太多甚至會更好」 → 其實說法還是很文謅謅。<br>
+簡單說法是，降維(Dimension reduction)是當資料維度數(變數)很多的時候，有沒有辦法讓維度數(變數)少一點，但資料特性不會差太多。<br>
+<a href="https://medium.com/@chih.sheng.huang821/%E6%A9%9F%E5%99%A8-%E7%B5%B1%E8%A8%88%E5%AD%B8%E7%BF%92-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90-principle-component-analysis-pca-58229cd26e71" target="_blank" rel="noopener">https://medium.com/@chih.sheng.huang821/機器-統計學習-主成分分析-principle-component-analysis-pca-58229cd26e71</a></p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA<br><span class="hljs-comment"># Create a Randomized PCA model that takes two components</span><br>randomized_pca = PCA(n_components=<span class="hljs-number">2</span>,svd_solver=<span class="hljs-string">'randomized'</span>)<br></code></pre></td></tr></table></figure>
-<hr>
-<h1>Colab 各種疑難雜症</h1>
-<h2 id="Matplotlib-繁體中文顯示">Matplotlib 繁體中文顯示</h2>
+<h1>ISOMAP</h1>
+<p>在降維演算法中，一種方式是提供點的座標進行降維，如PCA；另一種方式是提供點之間的距離矩陣，ISOMAP中用到的MDS(Multidimensional Scaling)就是這樣。<br>
+在計算距離的時候，最簡單的方式自然是計算座標之間的歐氏距離，但ISOMAP對此進行了改進，就像上面圖示一樣：</p>
 <blockquote>
-<p><a href="https://gist.github.com/iamtekeste/3cdfd0366ebfd2c0d805" target="_blank" rel="noopener">參考Github</a><br>
-<a href="https://cyfeng.science/2020/03/20/chinese-colab-env/" target="_blank" rel="noopener">還有這篇</a><br>
-2020/07/15 測試可用<br>
-缺點: 字體大小被鎖在24，但這方法最簡單，能看到就好 😤</p>
+<p>1.通過kNN(k-Nearest Neighbor)找到點的k個最近鄰，將它們連線起來構造一張圖。<br>
+2.通過計算同中各點之間的最短路徑，作為點之間的距離dij放入距離矩陣D<br>
+3.將D傳給經典的MDS演算法，得到降維後的結果。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">// 1. Google Drive下載台北黑體-&gt;移動到字體資料夾<br>!wget --load-cookies /tmp/cookies.txt <span class="hljs-string">"https://docs.google.com/uc?export=download&amp;confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_"</span> -O TaipeiSansTCBeta-Regular.ttf &amp;&amp; rm -rf /tmp/cookies.txt<br>!mv TaipeiSansTCBeta-Regular.ttf /usr/share/fonts/truetype/<br>// <span class="hljs-number">2.</span> 在程式裡宣告<br><span class="hljs-keyword">import</span> matplotlib.font_manager <span class="hljs-keyword">as</span> fm<br>path = <span class="hljs-string">'/usr/share/fonts/truetype/TaipeiSansTCBeta-Regular.ttf'</span><br>fontprop = fm.FontProperties(fname=path, size=<span class="hljs-number">24</span>)<br>// <span class="hljs-number">3.</span> 在該顯示中文的句子中加入這個屬性 (fontproperties=fontprop)<br>ex.<br>plt.title(<span class="hljs-string">'預測: '</span> + str(prediction), color=<span class="hljs-string">'white'</span>, fontproperties=fontprop)<br></code></pre></td></tr></table></figure>
+<p>ISOMAP本身的核心就在構造點之間的距離，初看時不由得為其拍案叫絕，類似的思想在很多降維演算法中都能看到，比如能將超高維資料進行降維視覺化的t-SNE。</p>
+
     </section>
     <section class="extra">
       
@@ -240,10 +240,8 @@ https://colab.r..." />
       
 <nav class="nav">
   
-    <a href="/2020/07/%E9%99%8D%E7%B6%AD/"><i class="iconfont iconleft"></i>降維</a>
   
-  
-    <a href="/2020/07/%E8%AB%96%E6%96%87%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/">論文閱讀筆記<i class="iconfont iconright"></i></a>
+    <a href="/2020/07/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E3%81%AE%E9%82%A3%E4%BA%9B%E4%BA%8B/">機器學習の那些事<i class="iconfont iconright"></i></a>
   
 </nav>
 
