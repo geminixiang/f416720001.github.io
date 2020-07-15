@@ -34,8 +34,7 @@
     
     <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
      
-    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,Colab 各種疑難雜症
-Matplotlib 繁體中..." />
+    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,sklearn.decomposition.Rando..." />
      
     <meta name="author" content="趙映翔" />
      
@@ -164,19 +163,26 @@ Matplotlib 繁體中..." />
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-15</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>908</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1177</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
-      <h1>Colab 各種疑難雜症</h1>
+      <h1>sklearn.decomposition.RandomizedPCA</h1>
+<blockquote>
+<p>sklearn.decomposition.RandomizedPCA 僅僅是0.17的版本的。後續的版本都沒有了。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA<br><span class="hljs-comment"># Create a Randomized PCA model that takes two components</span><br>randomized_pca = PCA(n_components=<span class="hljs-number">2</span>,svd_solver=<span class="hljs-string">'randomized'</span>)<br></code></pre></td></tr></table></figure>
+<h1>Colab 各種疑難雜症</h1>
 <h2 id="Matplotlib-繁體中文顯示">Matplotlib 繁體中文顯示</h2>
 <blockquote>
-<p>2020/07/15 測試可用<br>
+<p><a href="https://gist.github.com/iamtekeste/3cdfd0366ebfd2c0d805" target="_blank" rel="noopener">參考Github</a><br>
+<a href="https://cyfeng.science/2020/03/20/chinese-colab-env/" target="_blank" rel="noopener">還有這篇</a><br>
+2020/07/15 測試可用<br>
 缺點: 字體大小被鎖在24，但這方法最簡單，能看到就好 😤</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 1. Google Drive下載台北黑體-&gt;移動到字體資料夾<br>!wget --load-cookies /tmp/cookies.txt <span class="hljs-string">"https://docs.google.com/uc?export=download&amp;confirm=<span class="hljs-variable">$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+)</span>.*/\1\n/p')&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_"</span> -O TaipeiSansTCBeta-Regular.ttf &amp;&amp; rm -rf /tmp/cookies.txt<br>!mv TaipeiSansTCBeta-Regular.ttf /usr/share/fonts/truetype/<br>// 2. 在程式裡宣告<br>import matplotlib.font_manager as fm<br>path = <span class="hljs-string">'/usr/share/fonts/truetype/TaipeiSansTCBeta-Regular.ttf'</span><br>fontprop = fm.FontProperties(fname=path, size=24)<br>// 3. 在該顯示中文的句子中加入這個屬性 (fontproperties=fontprop)<br>ex.<br>plt.title(<span class="hljs-string">'預測: '</span> + str(prediction), color=<span class="hljs-string">'white'</span>, fontproperties=fontprop)<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">// 1. Google Drive下載台北黑體-&gt;移動到字體資料夾<br>!wget --load-cookies /tmp/cookies.txt <span class="hljs-string">"https://docs.google.com/uc?export=download&amp;confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&amp;id=1eGAsTN1HBpJAkeVM57_C7ccp7hbgSz3_"</span> -O TaipeiSansTCBeta-Regular.ttf &amp;&amp; rm -rf /tmp/cookies.txt<br>!mv TaipeiSansTCBeta-Regular.ttf /usr/share/fonts/truetype/<br>// <span class="hljs-number">2.</span> 在程式裡宣告<br><span class="hljs-keyword">import</span> matplotlib.font_manager <span class="hljs-keyword">as</span> fm<br>path = <span class="hljs-string">'/usr/share/fonts/truetype/TaipeiSansTCBeta-Regular.ttf'</span><br>fontprop = fm.FontProperties(fname=path, size=<span class="hljs-number">24</span>)<br>// <span class="hljs-number">3.</span> 在該顯示中文的句子中加入這個屬性 (fontproperties=fontprop)<br>ex.<br>plt.title(<span class="hljs-string">'預測: '</span> + str(prediction), color=<span class="hljs-string">'white'</span>, fontproperties=fontprop)<br></code></pre></td></tr></table></figure>
     </section>
     <section class="extra">
       

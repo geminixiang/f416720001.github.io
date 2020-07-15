@@ -35,8 +35,10 @@
     <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
      
     <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,2020-07-15
+
 新增EMOJI 參考連結
-123..." />
+
+1..." />
      
     <meta name="author" content="趙映翔" />
      
@@ -165,17 +167,19 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-03</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1335</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1337</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
-      <p>2020-07-15<br>
-新增EMOJI <a href="https://chaxiaoniu.oschina.io/2017/07/10/HexoAddEmoji/" target="_blank" rel="noopener">參考連結</a></p>
+      <p>2020-07-15</p>
+<blockquote>
+<p>新增EMOJI <a href="https://chaxiaoniu.oschina.io/2017/07/10/HexoAddEmoji/" target="_blank" rel="noopener">參考連結</a></p>
+</blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 移除原本的markdown<br>$ npm un hexo-renderer-marked --save<br>// 新增markdown-it<br>$ npm i hexo-renderer-markdown-it --save<br>// 新增markdown-it-emoji<br>$ npm install markdown-it-emoji --save<br></code></pre></td></tr></table></figure>
 <p>_config.yml 設定改成這樣</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Markdown-it config</span><br><span class="hljs-comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span><br>markdown:<br>  render:<br>    html: <span class="hljs-literal">true</span><br>    xhtmlOut: <span class="hljs-literal">false</span><br>    breaks: <span class="hljs-literal">true</span><br>    linkify: <span class="hljs-literal">true</span><br>    typographer: <span class="hljs-literal">true</span><br>    quotes: <span class="hljs-string">'“”‘’'</span><br>  plugins:<br>    - markdown-it-abbr<br>    - markdown-it-footnote<br>    - markdown-it-ins<br>    - markdown-it-sub<br>    - markdown-it-sup<br>    - markdown-it-emoji  <span class="hljs-comment">## add emoji</span><br>  anchors:<br>    level: 2<br>    collisionSuffix: <span class="hljs-string">'v'</span><br>    <span class="hljs-comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span><br>    permalink: <span class="hljs-literal">false</span>  <br>    permalinkClass: header-anchor<br>    <span class="hljs-comment"># The symbol used to make the permalink</span><br>    permalinkSymbol: ¶<br></code></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># Markdown-it config</span><br><span class="hljs-comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span><br><span class="hljs-attr">markdown:</span><br>  <span class="hljs-attr">render:</span><br>    <span class="hljs-attr">html:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">xhtmlOut:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-attr">breaks:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">linkify:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">typographer:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">quotes:</span> <span class="hljs-string">'“”‘’'</span><br>  <span class="hljs-attr">plugins:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-abbr</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-footnote</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-ins</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-sub</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-sup</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">markdown-it-emoji</span>  <span class="hljs-comment">## add emoji</span><br>  <span class="hljs-attr">anchors:</span><br>    <span class="hljs-attr">level:</span> <span class="hljs-number">2</span><br>    <span class="hljs-attr">collisionSuffix:</span> <span class="hljs-string">'v'</span><br>    <span class="hljs-comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span><br>    <span class="hljs-attr">permalink:</span> <span class="hljs-literal">false</span>  <br>    <span class="hljs-attr">permalinkClass:</span> <span class="hljs-string">header-anchor</span><br>    <span class="hljs-comment"># The symbol used to make the permalink</span><br>    <span class="hljs-attr">permalinkSymbol:</span> <span class="hljs-string">¶</span><br></code></pre></td></tr></table></figure>
 <hr>
 <p>2020-07-03</p>
 <h1>遇到問題</h1>
