@@ -34,10 +34,11 @@
     
     <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
      
-    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,Vuex
+    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,[[toc]]
+Vuex
 
 幾個重點
-component想要做寫入資料..." />
+componen..." />
      
     <meta name="author" content="趙映翔" />
      
@@ -166,27 +167,28 @@ component想要做寫入資料..." />
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-03</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1148</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1156</span>
     </div>
   </div>
 </section>
   <section class="main">
     <section class="content">
-      <h1>Vuex</h1>
-<p><img   class="lazyload" data-original="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="vuex"></p>
-<h2 id="幾個重點">幾個重點</h2>
-<h3 id="component想要做寫入資料，要透過-commit-去-mutations-呼叫函示來寫入">component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</h3>
+      <p>[[toc]]</p>
+<h1><span id="vuex">Vuex</span></h1>
+<p><img class="lazyload" data-original="https://miro.medium.com/max/1400/1*KIoNyRO6s_52W68Y-0usJw.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="vuex"></p>
+<h2><span id="幾個重點">幾個重點</span></h2>
+<h3><span id="component想要做寫入資料要透過-commit-去-mutations-呼叫函示來寫入">component想要做寫入資料，要透過 commit 去 mutations 呼叫函示來寫入</span></h3>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">this</span>.$store.commit(<span class="hljs-string">'SETDAY'</span>, val)<br></code></pre></td></tr></table></figure>
 <hr>
-<h1>Router</h1>
-<h2 id="Error-訊息">Error 訊息</h2>
+<h1><span id="router">Router</span></h1>
+<h2><span id="error-訊息">Error 訊息</span></h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">vue-router.esm.js?8c4f:2062 Uncaught (<span class="hljs-keyword">in</span> promise) <br>Error: Avoided redundant navigation to current location: <span class="hljs-string">"/path/1"</span>.<br></code></pre></td></tr></table></figure>
-<h2 id="解決之道">解決之道</h2>
-<h3 id="這裡要特別注意，如果在切換路徑時-帶數字編號那種-，可能會超過，或是數字沒超過但呼叫到router-以下這種-，使得變更路徑重複的問題，建議用if-else-把限制條件寫好。">這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</h3>
+<h2><span id="解決之道">解決之道</span></h2>
+<h3><span id="這裡要特別注意如果在切換路徑時帶數字編號那種可能會超過或是數字沒超過但呼叫到router以下這種使得變更路徑重複的問題建議用if-else-把限制條件寫好">這裡要特別注意，如果在切換路徑時(帶數字編號那種)，可能會超過，或是數字沒超過但呼叫到router(以下這種)，使得變更路徑重複的問題，建議用if else 把限制條件寫好。</span></h3>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">this</span>.$router.replace(&#123;<br>    params: &#123;<br>        day: day + <span class="hljs-number">1</span>,<br>    &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure>
-<h1>vue + windows10 ubuntu wsl</h1>
+<h1><span id="vue-windows10-ubuntu-wsl">vue + windows10 ubuntu wsl</span></h1>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">安裝指令紀錄<br><span class="hljs-comment">## 更新apt-get</span><br>$ sudo apt update<br>$ sudo apt-get update<br><span class="hljs-comment">## 安裝node.js+npm</span><br>$ sudo apt-get install nodejs<br>$ sudo apt-get install npm<br>$ npm install npm -g<br>$ npm list -g<br><span class="hljs-comment">## 安裝git</span><br>$ sudo apt-get install git<br><span class="hljs-comment">## 安裝vue + vue-cli</span><br>$ npm install vue<br>$ yarn global add @vue/cli-init<br><span class="hljs-comment">## 安裝webpack</span><br>$ npm install webpack -g<br><span class="hljs-comment">## 新建專案</span><br>$ vue init webpack PROJECT_NAME<br><span class="hljs-comment">## 打開專案資料夾</span><br>$ <span class="hljs-built_in">cd</span> PROJECT_NAME<br>$ npm install<br><span class="hljs-comment">## 執行</span><br>$ npm run dev<br></code></pre></td></tr></table></figure>
-<h1>npm run build 遇到各種難題</h1>
+<h1><span id="npm-run-build-遇到各種難題">npm run build 遇到各種難題</span></h1>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">## 問題?建立完後，把dist資料夾部屬上去，一片空白<br>## 解決。vue cli3 專案根目錄新增 vue.config.js 這個檔案，裡面新增下面這一串<br><span class="hljs-built_in">module</span>.exports = &#123;<br>  publicPath: <span class="hljs-string">"./"</span><br>&#125;;<br><br># 所有template css vue 檔案中的路徑、還有import時、還有 axios.get 時請注意，麻煩以 ./ or @/ (==./src)開頭<br>## 圖片就以 ./img 為開頭，然後圖片丟到 ./public/img 即可<br></code></pre></td></tr></table></figure>
     </section>
     <section class="extra">
@@ -231,6 +233,8 @@ component想要做寫入資料..." />
 
       
       
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
       
 <nav class="nav">
   

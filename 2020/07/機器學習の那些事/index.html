@@ -171,22 +171,22 @@ https://colab.r..." />
   <section class="main">
     <section class="content">
       <p>2020.07.15.<br>
-<a href="https://colab.research.google.com/drive/1gPwOi-itgalWUxj8ZTTE6bwVl6kLyPLs?usp=sharing" target="_blank" rel="noopener">https://colab.research.google.com/drive/1gPwOi-itgalWUxj8ZTTE6bwVl6kLyPLs?usp=sharing</a><br>
-<img   class="lazyload" data-original="https://scikit-learn.org/stable/_static/ml_map.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="cheatsheet"></p>
-<h1>sklearn</h1>
+https://colab.research.google.com/drive/1gPwOi-itgalWUxj8ZTTE6bwVl6kLyPLs?usp=sharing<br>
+<img class="lazyload" data-original="https://scikit-learn.org/stable/_static/ml_map.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="cheatsheet"></p>
+<h1><span id="sklearn">sklearn</span></h1>
 <blockquote>
 <p>我使用的版本 scikit-learn 0.23.1</p>
 </blockquote>
-<h2 id="ImportError-No-module-named-sklearn-cross-validation">ImportError: No module named sklearn.cross_validation</h2>
+<h2><span id="importerror-no-module-named-sklearncross_validation">ImportError: No module named sklearn.cross_validation</span></h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br></code></pre></td></tr></table></figure>
-<h2 id="ImportError-No-module-named-sklearn-decomposition-RandomizedPCA">ImportError: No module named sklearn.decomposition.RandomizedPCA</h2>
+<h2><span id="importerror-no-module-named-sklearndecompositionrandomizedpca">ImportError: No module named sklearn.decomposition.RandomizedPCA</span></h2>
 <blockquote>
 <p>sklearn.decomposition.RandomizedPCA 僅僅是0.17的版本的。後續的版本都沒有了。</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA<br><span class="hljs-comment"># Create a Randomized PCA model that takes two components</span><br>randomized_pca = PCA(n_components=<span class="hljs-number">2</span>,svd_solver=<span class="hljs-string">'randomized'</span>)<br></code></pre></td></tr></table></figure>
 <hr>
-<h1>Colab 各種疑難雜症</h1>
-<h2 id="Matplotlib-繁體中文顯示">Matplotlib 繁體中文顯示</h2>
+<h1><span id="colab-各種疑難雜症">Colab 各種疑難雜症</span></h1>
+<h2><span id="matplotlib-繁體中文顯示">Matplotlib 繁體中文顯示</span></h2>
 <blockquote>
 <p><a href="https://gist.github.com/iamtekeste/3cdfd0366ebfd2c0d805" target="_blank" rel="noopener">參考Github</a><br>
 <a href="https://cyfeng.science/2020/03/20/chinese-colab-env/" target="_blank" rel="noopener">還有這篇</a><br>

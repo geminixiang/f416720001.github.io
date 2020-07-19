@@ -1041,7 +1041,7 @@ body p {
 }
 .article .main .content p code {
   font-size: 1em;
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
   padding: 2px 5px;
   border-radius: 2px;
   color: #ffbe5b;
@@ -1079,7 +1079,7 @@ body p {
   border: none;
 }
 .article .main .content figure .code code {
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
   padding: 1em;
   border-radius: 10px;
 }
@@ -1098,7 +1098,7 @@ body p {
 .article .main .content blockquote {
   margin: 0 0 1em;
   padding: 15px 20px;
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
   border-left: 3px solid #ffbe5b;
   border-left-width: 6px;
 }
@@ -1166,7 +1166,7 @@ body p {
   list-style-type: none;
   margin-right: 1em;
   padding: 5px 10px;
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
 }
 .article .extra .tag-list .tag-list-item:hover {
   cursor: pointer;
@@ -1189,7 +1189,7 @@ body p {
 .article .comments .btn {
   display: block;
   padding: 10px;
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
   text-align: center;
 }
 .article .comments .btn:hover {
@@ -1283,7 +1283,7 @@ body p {
 }
 .tags a {
   padding: 5px 10px;
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
   margin-right: 10px;
 }
 .tags a:hover {
@@ -1310,7 +1310,7 @@ body p {
   margin: 0 10px 10px 0;
   display: inline-block;
   padding: 5px 10px;
-  background-color: #c2d5e8;
+  background-color: #f7f7f7;
 }
 .categories ul li a {
   margin-right: 5px;
