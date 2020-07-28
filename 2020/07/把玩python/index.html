@@ -167,7 +167,7 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-18</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1163</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1986</span>
     </div>
   </div>
 </section>
@@ -214,7 +214,33 @@ https://www.coderbridge.com/@Eterna-E/0baeb8bf25e543ed8462bd742cd1946f</p>
 command 範例 (1080P+最高音質)<br>
 youtube-dl -f 137+251 https://www.youtube.com/watch?v=RDINtdz4OYQ</p>
 </blockquote>
-
+<h2><span id="pandas">pandas</span></h2>
+<h3><span id="中文繪圖">中文繪圖</span></h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pylab <span class="hljs-keyword">import</span> mpl<br>mpl.rcParams[<span class="hljs-string">'font.sans-serif'</span>] = [<span class="hljs-string">'Microsoft YaHei'</span>]  <br>mpl.rcParams[<span class="hljs-string">'axes.unicode_minus'</span>] = <span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>Pandas有以下類型的圖可以繪製<br>
+折線圖df.plot()<br>
+柱狀圖df.plot(kind=‘bar’)<br>
+橫向柱狀圖df.plot(kind=‘barh’)<br>
+直方圖df.plot(kind=‘hist’)<br>
+KDE圖df.plot(kind=‘kde’)<br>
+面積圖df.plot(kind=‘area’)<br>
+圓餅圖df.plot(kind=‘pie’)<br>
+散佈圖df.plot(kind=‘scatter’)<br>
+六角形箱體圖df.plot(kind=‘hexbin’)<br>
+箱形圖df.plot(kind=‘box’)</p>
+</blockquote>
+<h3><span id="ufeff">\ufeff ???</span></h3>
+<blockquote>
+<p>這個是檔案編碼時，有時會出現的隱藏字元<br>
+網路上大家都說 utf-8 改成 utf-8-sig 就好<br>
+但我還是遇到這問題，於是新增一個 if 去排除掉這個問題@@</p>
+</blockquote>
+<h2><span id="csv-寫入">csv 寫入</span></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> csv<br><br>output = open(filepath, <span class="hljs-string">'a'</span>, newline=<span class="hljs-string">''</span>, encoding=<span class="hljs-string">'utf-8-sig'</span>)<br>writer = csv.writer(output)<br><br>writer.writerow([<span class="hljs-string">'date'</span>,<span class="hljs-string">'num'</span>,<span class="hljs-string">'sp'</span>,<span class="hljs-string">'dex'</span>])<br>writer.writerow([f_date, d[<span class="hljs-string">'num'</span>], d[<span class="hljs-string">'sp'</span>], d[<span class="hljs-string">'dex'</span>]])<br></code></pre></td></tr></table></figure>
+<h2><span id="正規化">正規化</span></h2>
+<h3><span id="去除html標籤">去除html標籤</span></h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br>reg = re.compile(<span class="hljs-string">r'&lt;[^&gt;]+&gt;'</span>,re.S)<br><br>html = <span class="hljs-string">'hi&lt;br&gt;'</span><br>nohtml = reg.sub(<span class="hljs-string">''</span>,html)<br>print(nohtml)<br></code></pre></td></tr></table></figure>
     </section>
     <section class="extra">
       
@@ -260,6 +286,8 @@ youtube-dl -f 137+251 https://www.youtube.com/watch?v=RDINtdz4OYQ</p>
       
       
 <nav class="nav">
+  
+    <a href="/2020/07/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%90%84%E7%A8%AE%E7%91%A3%E4%BA%8B/"><i class="iconfont iconleft"></i>前端的各種瑣事</a>
   
   
     <a href="/2020/07/%E5%9B%9E%E6%86%B6/">回憶<i class="iconfont iconright"></i></a>
