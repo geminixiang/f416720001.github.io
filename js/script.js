@@ -1,5 +1,25 @@
 console.log("%c Github %c", "background:#333333; color:#ffffff", "", "主題使用的是:", "https://github.com/izhaoo/hexo-theme-zhaoo");
+function hereDoc(f) {
+  return f
+    .toString()
+    .replace(/^[^\/]+\/\*!?\s?/, "")
+    .replace(/\*\/[^\/]+$/, "");
+}
+var string = hereDoc(function () {
+/*
+$$$$$$$$\ $$\     $$\ $$\   $$\ 
+\____$$  |\$$\   $$  |$$ |  $$ |
+    $$  /  \$$\ $$  / \$$\ $$  |
+   $$  /    \$$$$  /   \$$$$  / 
+  $$  /      \$$  /    $$  $$<  
+ $$  /        $$ |    $$  /\$$\ 
+$$$$$$$$\     $$ |    $$ /  $$ |
+\________|    \__|    \__|  \__|
 
+我是Zhao       Ying       Xiang  :>
+   */
+});
+console.log(string);
 ;(function ($) {
   "use strict";
 
