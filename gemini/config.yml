@@ -1,0 +1,144 @@
+baseURL: https://f416720001.github.io/
+languageCode: zh-Hant-TW
+title: 映翔
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-121888513-2
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: GeminiXiang's blog
+  description: "剛步入社會，紀錄與學習仍要繼續"
+  keywords: [科技, 技術, 後端]
+  author: GeminiXiang
+  # author: ["Me", "You"] # multiple authors
+  images: ["DSC01583.JPG"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: /icons/zhaoo-logo.png
+    favicon16x16: /icons/favicon-16x16.png
+    favicon32x32: /icons/favicon-32x32.png
+    apple_touch_icon: /icons/apple-touch-icon.png
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "GeminiXiang's blog"
+    icon: /icons/apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: /DSC01583.JPG
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "剛成為後端工程師的我 - \U0001F44B"
+    Content: >
+      - 歡迎來到GeminiXiang的筆記小天地 (有心力就更新)
+
+      - 近期在串接大數據資料流，有許多技術文可以來分享
+
+      - kafka->AWS EMR->BigQuery
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/f416720001"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/%E6%98%A0%E7%BF%94-%E8%B6%99-567669196/"
+    - name: cakeresume
+      url: "https://www.cakeresume.com/f416720001-2011c8"
+
+  # analytics:
+  # google:
+  # SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  editPost:
+    URL: "https://github.com/f416720001/f416720001.github.io"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: Search
+      name: search
+      url: /search/
+      weight: 20
+    - identifier: About
+      name: about
+      url: /about/
+      weight: 20
+    - identifier: Posts
+      name: posts
+      url: /posts/
+      weight: 20
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    lineNos: true
+    # anchorLineNos: true
+    # codeFences: true
+    guessSyntax: true
+    style: monokai
