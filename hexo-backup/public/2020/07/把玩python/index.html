@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>把玩python - 映翔的學習筆記</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="google" content="notranslate" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-121888513-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-121888513-2");
+    </script>
+
+    
+    <meta name="keywords" content="zhaoo, hexo-theme-zhaoo," />
+     
+    <meta name="description" content="體重如果降到75公斤，可不可以...突然發現沒啥想要的,套件
+
+
+下載youtube影片模組
+2020-07-..." />
+     
+    <meta name="author" content="趙映翔" />
+     
+    <link
+      rel="icon"
+      href="/images/icons/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+     
+    <link
+      rel="icon"
+      href="/images/icons/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+     
+    <link
+      rel="apple-touch-icon"
+      href="/images/icons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+     
+    <meta
+      rel="mask-icon"
+      href="/images/icons/stun-logo.svg"
+      color="#333333"
+    />
+     
+    <meta
+      rel="msapplication-TileImage"
+      content="/images/icons/favicon-144x144.png"
+    />
+    <meta rel="msapplication-TileColor" content="#000000" />
+     
+<link rel="stylesheet" href="/css/style.css">
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_58xq2j9v1id.css">
+    
+<link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css">
+    
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
+ 
+
+    <script>
+      var CONFIG = window.CONFIG || {}
+      CONFIG = {
+        fancybox: true,
+        pjax: false,
+        lazyload: {
+          enable: true,
+          loadingImage: '/images/theme/loading.gif',
+        },
+        donate_alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        donate_wechat: 'https://pic.izhaoo.com/wechat.jpg',
+        motto: {
+          api: '',
+          default: '105元 = 法式芥茉香雞堡+小杯玉米湯+大暑大可少冰。'
+        },
+        galleries: {
+          enable: 'true'
+        },
+        fab: {
+          enable: 'true',
+          alwaysShow: 'true'
+        }
+      }
+    </script>
+
+     
+  <meta name="generator" content="Hexo 4.2.1"></head>
+</html>
+
+<body class="lock-screen">
+  <div class="loading"></div>
+  <nav class="menu">
+  <div class="menu-close">
+    <i class="iconfont iconplus"></i>
+  </div>
+  <ul class="menu-content">
+    
+    
+    
+    
+    <li class="menu-item"><a href="/ "> 首頁</a></li>
+    
+    
+    
+    
+    <li class="menu-item"><a href="/galleries "> 攝影</a></li>
+    
+    
+    
+    
+    <li class="menu-item"><a href="/archives "> 封存</a></li>
+    
+    
+    
+    
+    <li class="menu-item"><a href="/tags "> 標籤</a></li>
+    
+    
+    
+    
+    <li class="menu-item"><a href="/categories "> 分類</a></li>
+    
+    
+    
+    
+    <li class="menu-item"><a href="/about "> 關於</a></li>
+    
+  </ul>
+  <div class="menu-copyright"><p>Copyright© 2020 | <a target="_blank" href="https://geminimc.nctu.me/">GeminiXiang</a> AllRightsReserved</p></div>
+</nav>
+  <main id="main">
+  <div class="container" id="container">
+    <article class="article">
+  <section class="head">
+  <a href="/" id="geminilogo"></a>
+  <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">把玩python</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>2020-07-18</span
+        class="post-info-item">
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1986</span>
+    </div>
+  </div>
+</section>
+  <section class="main">
+    <section class="content">
+      <h1><span id="套件">套件</span></h1>
+<hr>
+<h2><span id="pytube3"></span></h2>
+<h3><span id="下載youtube影片模組">下載youtube影片模組</span></h3>
+<h4><span id="2020-07-18">2020-07-18</span></h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 注意別用以下這個安裝，會報錯誤<br>// 錯誤 ImportError: cannot import name <span class="hljs-string">'quote'</span> from <span class="hljs-string">'pytube.compat'</span><br>pip install pytube<br>// 請用<br>// pip install pytube3<br>// 測試環境python3.7.6 pytube3 9.6.4<br></code></pre></td></tr></table></figure>
+<h3><span id="此刻遇到問題">此刻遇到問題</span></h3>
+<blockquote>
+<p>KeyError: ‘url’ and KeyError: ‘cipher’ ,please someone update this code or some procedure to fix my code</p>
+<blockquote>
+<p>解決方法<br>
+https://github.com/nficano/pytube/issues/661#issuecomment-650766403</p>
+</blockquote>
+</blockquote>
+<h3><span id="接著安裝ffmpeg">接著安裝ffmpeg</span></h3>
+<blockquote>
+<p>https://www.wikihow.com/Install-FFmpeg-on-Windows<br>
+pip install ffmpeg-python</p>
+</blockquote>
+<h3><span id="此刻遇到問題">此刻遇到問題</span></h3>
+<blockquote>
+<p>Python FileNotFoundError: [WinError 2] 系統找不到指定的文件。</p>
+<blockquote>
+<p>在lib文件夾中找到subprocess.py<br>
+1、搜索class Popen(object):<br>
+2、將__init__中的shell=False修改為shell=True<br>
+再運行問題解決。<br>
+https://blog.csdn.net/u014094184/article/details/80085336</p>
+</blockquote>
+</blockquote>
+<h3><span id="合併-videomp4-and-audiowebm">合併 video.mp4 and audio.webm</span></h3>
+<p>https://stackoverflow.com/questions/61777314/how-to-use-ffmpeg-to-merge-webm-audio-opus-and-mp4-video-h-264-into-one-mp4<br>
+https://blog.shikoan.com/pytube-ffmepg-concat-video-audio/<br>
+https://www.coderbridge.com/@Eterna-E/0baeb8bf25e543ed8462bd742cd1946f</p>
+<h3><span id="youtube-dl-gui-最後還是這個最好用">youtube-dl-gui 最後還是這個最好用</span></h3>
+<blockquote>
+<p>下載連結 https://mrs0m30n3.github.io/youtube-dl-gui/<br>
+或是 pip install youtube_dl<br>
+command 範例 (1080P+最高音質)<br>
+youtube-dl -f 137+251 https://www.youtube.com/watch?v=RDINtdz4OYQ</p>
+</blockquote>
+<h2><span id="pandas">pandas</span></h2>
+<h3><span id="中文繪圖">中文繪圖</span></h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pylab <span class="hljs-keyword">import</span> mpl<br>mpl.rcParams[<span class="hljs-string">'font.sans-serif'</span>] = [<span class="hljs-string">'Microsoft YaHei'</span>]  <br>mpl.rcParams[<span class="hljs-string">'axes.unicode_minus'</span>] = <span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>Pandas有以下類型的圖可以繪製<br>
+折線圖df.plot()<br>
+柱狀圖df.plot(kind=‘bar’)<br>
+橫向柱狀圖df.plot(kind=‘barh’)<br>
+直方圖df.plot(kind=‘hist’)<br>
+KDE圖df.plot(kind=‘kde’)<br>
+面積圖df.plot(kind=‘area’)<br>
+圓餅圖df.plot(kind=‘pie’)<br>
+散佈圖df.plot(kind=‘scatter’)<br>
+六角形箱體圖df.plot(kind=‘hexbin’)<br>
+箱形圖df.plot(kind=‘box’)</p>
+</blockquote>
+<h3><span id="ufeff">\ufeff ???</span></h3>
+<blockquote>
+<p>這個是檔案編碼時，有時會出現的隱藏字元<br>
+網路上大家都說 utf-8 改成 utf-8-sig 就好<br>
+但我還是遇到這問題，於是新增一個 if 去排除掉這個問題@@</p>
+</blockquote>
+<h2><span id="csv-寫入">csv 寫入</span></h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> csv<br><br>output = open(filepath, <span class="hljs-string">'a'</span>, newline=<span class="hljs-string">''</span>, encoding=<span class="hljs-string">'utf-8-sig'</span>)<br>writer = csv.writer(output)<br><br>writer.writerow([<span class="hljs-string">'date'</span>,<span class="hljs-string">'num'</span>,<span class="hljs-string">'sp'</span>,<span class="hljs-string">'dex'</span>])<br>writer.writerow([f_date, d[<span class="hljs-string">'num'</span>], d[<span class="hljs-string">'sp'</span>], d[<span class="hljs-string">'dex'</span>]])<br></code></pre></td></tr></table></figure>
+<h2><span id="正規化">正規化</span></h2>
+<h3><span id="去除html標籤">去除html標籤</span></h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br>reg = re.compile(<span class="hljs-string">r'&lt;[^&gt;]+&gt;'</span>,re.S)<br><br>html = <span class="hljs-string">'hi&lt;br&gt;'</span><br>nohtml = reg.sub(<span class="hljs-string">''</span>,html)<br>print(nohtml)<br></code></pre></td></tr></table></figure>
+    </section>
+    <section class="extra">
+      
+        <section class="donate">
+  <!-- <div class="qrcode">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div> -->
+  <div class="icon">
+    <a href="https://github.com/f416720001" id="alipay"
+      ><i class="iconfont icongithub-fill"></i
+    ></a>
+    <a href="https://geminimc.nctu.me/" id="wechat"
+      ><i class="iconfont iconwechat-fill"></i
+    ></a>
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script>
+        // var disqus_config = function () {
+        //   this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+        //   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        // };
+
+        var disqus_config = function () {
+          this.language = "zh_TW";
+        };
+
+        (function () {
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://f416720001.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+  </noscript>
+</section>
+
+      
+      
+      
+<nav class="nav">
+  
+    <a href="/2020/07/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%90%84%E7%A8%AE%E7%91%A3%E4%BA%8B/"><i class="iconfont iconleft"></i>前端的各種瑣事</a>
+  
+  
+    <a href="/2020/07/%E5%9B%9E%E6%86%B6/">回憶<i class="iconfont iconright"></i></a>
+  
+</nav>
+
+    </section>
+    
+      <section class="comments">
+        
+          <div class="btn" id="comments-btn">查看留言</div>
+        
+        
+      </section>
+    
+  </section>
+</article>
+  </div>
+</main>
+  <footer class="footer">
+  <div class="footer-social">
+    
+    
+    
+    
+    
+    <a href="https://www.instagram.com/f416720001 " target="_blank" onMouseOver="this.style.color= '#DA2E76'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  iconinstagram "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://github.com/f416720001 " target="_blank" onMouseOver="this.style.color= '#24292E'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  icongithub-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="mailto:f416720001@gmail.com " target="_blank" onMouseOver="this.style.color='#FFBE5B'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  iconmail"></i>
+    </a>
+    
+  </div>
+  <div class="footer-copyright"><p>Copyright© 2020 | <a target="_blank" href="https://geminimc.nctu.me/">GeminiXiang</a> AllRightsReserved</p></div>
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  <div class="fab fab-menu">
+    <i class="iconfont iconmenu"></i>
+  </div>
+  
+</body>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
+
+
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
