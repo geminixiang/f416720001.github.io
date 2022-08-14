@@ -9,6 +9,16 @@
       <link>https://f416720001.github.io/DSC01583.JPG</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hant-TW</language><atom:link href="https://f416720001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Sun, 14 Aug 2022 23:24:28 +0800</lastBuildDate><atom:link href="https://f416720001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>https://f416720001.github.io/tags/hugo/</link>
+      <pubDate>Sun, 14 Aug 2022 23:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
