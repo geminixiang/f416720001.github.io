@@ -1,0 +1,94 @@
+<% if(theme.vendors.jquery_js){ %>
+<%- js(theme.vendors.jquery_js) %>
+<% }else{ %>
+<%- js('lib/jquery/jquery.js')%>
+<% } %>
+
+<% if(theme.fancybox){ %>
+<% if(theme.vendors.fancybox_js){ %>
+<%- js(theme.vendors.fancybox_js) %>
+<% }else{ %>
+<%- js('lib/fancybox/fancybox.js')%>
+<% }} %>
+
+<% if(theme.pjax){ %>
+<% if(theme.vendors.pjax_js){ %>
+<%- js(theme.vendors.pjax_js) %>
+<% }else{ %>
+<%- js('lib/pjax/pjax.js')%>
+<% }} %>
+
+<% if(theme.lazyload){ %>
+<% if(theme.vendors.lazyload_js){ %>
+<%- js(theme.vendors.lazyload_js) %>
+<% }else{ %>
+<%- js('lib/lazyload/lazyload.js')%>
+<% }} %>
+
+<% if(theme.galleries.enable){ %>
+<% if(theme.vendors.justifiedGallery_js){ %>
+<%- js(theme.vendors.justifiedGallery_js) %>
+<% }else{ %>
+<%- js('lib/justifiedGallery/justifiedGallery.js')%>
+<% }} %>
+
+<% if(theme.leancloud.enable){ %>
+<%- partial('_partial/common/visitors') %>
+<% } %>
+
+<%- js(['js/script']) %>
+
+<% if(theme.seo.baidu_auto_push) { %>
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<% } %>
+
+<% if(theme.analytics.baidu) { %>
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?<%- theme.analytics.baidu %>";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s)
+  })();
+</script>
+<% } %>
+
+<% if(theme.analytics.cnzz) { %>
+<script type="text/javascript"
+  src="https://s9.cnzz.com/z_stat.php?id=<%- theme.analytics.cnzz %>&web_id=127888982<%- theme.analytics.cnzz %>">
+  $("a[title='站长统计']").remove();
+</script>
+<% } %>
+
+<% if(theme.analytics.tencent) { %>
+<script>
+  var _mtac = {};
+  (function () {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "<%- theme.analytics.tencent %>");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+  })();
+</script>
+<% } %>
+
+<% if(theme.custom.foot) { %>
+<%- theme.custom.foot  %>
+<% } %>
+
+<%- (theme.custom.js && js(theme.custom.js)) %>

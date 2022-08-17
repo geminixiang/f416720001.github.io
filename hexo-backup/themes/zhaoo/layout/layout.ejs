@@ -1,0 +1,12 @@
+<%- partial('_partial/head') %>
+<body class="lock-screen">
+  <%- partial('_partial/common/loading') %>
+  <%- partial('_partial/menu') %>
+  <%- body %>
+  <%- partial('_partial/footer') %>
+  <% if (theme.fab.enable) { %>
+    <%- partial('_partial/common/fab') %>
+  <% } %>
+</body>
+<%- partial('_partial/script') %>
+</html>

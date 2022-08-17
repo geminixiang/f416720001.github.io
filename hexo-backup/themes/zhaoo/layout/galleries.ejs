@@ -1,0 +1,16 @@
+<main id="main">
+  <section class="galleries container">
+    <%- partial('_partial/header', {title: theme.galleries.title, subtitle: theme.galleries.subtitle}) %>
+    <% if (site.data && site.data.galleries) { %>
+    <% var galleries = site.data.galleries; %>
+    <div id="galleries">
+      <% for (var i = 0, len = galleries.length; i < len; i++) { %>
+      <% var gallery = galleries[i]; %>
+      <a href="./<%- gallery.name %>">
+        <img src="<%- gallery.cover %>" alt="<%- gallery.name %>">
+      </a>
+      <% } %>
+    </div>
+    <% } %>
+  </section>
+</main>

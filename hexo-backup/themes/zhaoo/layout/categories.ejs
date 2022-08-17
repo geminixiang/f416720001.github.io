@@ -1,0 +1,6 @@
+<main id="main">
+  <section class="categories">
+    <%- partial('_partial/header', {title: '分類', subtitle: `共: ${site.categories.length} 個`}) %>
+    <%- list_categories({orderby: "length", order: -1}) %>
+  </section>
+</main>
