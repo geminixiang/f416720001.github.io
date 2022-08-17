@@ -10,7 +10,61 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hant-TW</language>
-    <lastBuildDate>Sun, 14 Aug 2022 23:24:28 +0800</lastBuildDate><atom:link href="https://f416720001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Aug 2022 15:55:28 +0800</lastBuildDate><atom:link href="https://f416720001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aws</title>
+      <link>https://f416720001.github.io/tags/aws/</link>
+      <pubDate>Wed, 17 Aug 2022 15:55:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emr</title>
+      <link>https://f416720001.github.io/tags/emr/</link>
+      <pubDate>Wed, 17 Aug 2022 15:55:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/emr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://f416720001.github.io/tags/docker/</link>
+      <pubDate>Mon, 15 Aug 2022 10:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://f416720001.github.io/tags/python/</link>
+      <pubDate>Mon, 15 Aug 2022 10:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trick</title>
+      <link>https://f416720001.github.io/tags/trick/</link>
+      <pubDate>Mon, 15 Aug 2022 10:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/trick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>registry</title>
+      <link>https://f416720001.github.io/tags/registry/</link>
+      <pubDate>Mon, 15 Aug 2022 09:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/tags/registry/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hugo</title>
       <link>https://f416720001.github.io/tags/hugo/</link>
