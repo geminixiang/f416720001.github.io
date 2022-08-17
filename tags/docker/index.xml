@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on 映翔</title>
+    <link>https://f416720001.github.io/tags/docker/</link>
+    <description>Recent content in docker on 映翔</description>
+    <image>
+      <url>https://f416720001.github.io/DSC01583.JPG</url>
+      <link>https://f416720001.github.io/DSC01583.JPG</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hant-TW</language>
+    <lastBuildDate>Mon, 15 Aug 2022 10:24:28 +0800</lastBuildDate><atom:link href="https://f416720001.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker timezone 時區問題</title>
+      <link>https://f416720001.github.io/posts/docker-timezone-%E6%99%82%E5%8D%80%E5%95%8F%E9%A1%8C/</link>
+      <pubDate>Mon, 15 Aug 2022 10:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/posts/docker-timezone-%E6%99%82%E5%8D%80%E5%95%8F%E9%A1%8C/</guid>
+      <description>奇怪的知識又增加了</description>
+    </item>
+    
+    <item>
+      <title>Docker private registry搭建</title>
+      <link>https://f416720001.github.io/posts/docker-private-registry%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Mon, 15 Aug 2022 09:24:28 +0800</pubDate>
+      
+      <guid>https://f416720001.github.io/posts/docker-private-registry%E6%90%AD%E5%BB%BA/</guid>
+      <description>簡易搭建及使用</description>
+    </item>
+    
+  </channel>
+</rss>
