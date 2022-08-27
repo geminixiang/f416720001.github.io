@@ -1,6 +1,7 @@
 baseURL: https://f416720001.github.io/
-languageCode: zh-Hant-TW
-title: 映翔
+languageCode: zh-tw
+defaultContentLanguage: zh-tw
+title: GeminiXiang
 theme: "PaperMod"
 publishDir: "docs"
 
@@ -35,7 +36,7 @@ params:
     ShowCodeCopyButtons: false
     ShowWordCount: true
     ShowRssButtonInSectionTermList: true
-    # UseHugoToc: true
+    UseHugoToc: false
     disableSpecial1stPost: false
     disableScrollToTop: false
     ShowCodeCopyButtons: true
@@ -139,21 +140,25 @@ params:
 menu:
     main:
         - identifier: Search
-          name: 🔍
+          name: 🍭
           url: /search/
           weight: 20
         - identifier: About
           name: about
           url: /about/
           weight: 20
-        - identifier: Posts
-          name: posts
-          url: /posts/
-          weight: 20
+        # - identifier: Posts
+        #   name: posts
+        #   url: /posts/
+        #   weight: 20
         - identifier: tags
           name: tags
           url: /tags/
           weight: 20
+        - identifier: archive
+          name: archive
+          url: /archives/
+          weight: 10
 
 # Search page
 outputs:
