@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>映翔</title>
+    <title>GeminiXiang</title>
     <link>https://f416720001.github.io/</link>
-    <description>Recent content on 映翔</description>
+    <description>Recent content on GeminiXiang</description>
     <image>
       <url>https://f416720001.github.io/DSC01583.JPG</url>
       <link>https://f416720001.github.io/DSC01583.JPG</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hant-TW</language>
+    <language>zh-tw</language>
     <lastBuildDate>Wed, 17 Aug 2022 23:03:53 +0800</lastBuildDate><atom:link href="https://f416720001.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>手機網頁100vh v.s. 網址列</title>
@@ -73,6 +73,7 @@
       <guid>https://f416720001.github.io/about/</guid>
       <description>跌跌撞撞 Skill Python、C++、Golang、Vue.js</description>
     </item>
+    
     
     
   </channel>
