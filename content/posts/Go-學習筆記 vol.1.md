@@ -1,7 +1,7 @@
 ---
-title: "Go 學習筆記#1"
+title: "Go-學習筆記 vol.1"
 date: 2022-09-04T23:27:44+08:00
-tags: ["golang", "gin", "melody"]
+tags: ["golang", "gin", "melody", "websocket"]
 draft: false
 description: "奇怪的知識又增加了"
 cover:
